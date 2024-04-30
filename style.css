@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.hero {
+  display: grid;
+  grid-template-columns: repeat(18, 0.5fr);
+  grid-template-rows: repeat(7, 0.5fr);
+  gap: 1px;
+  width: 100%;
+  height: 60%;
+  background: url("images/Rectangle\ 5.png") center/cover no-repeat;
+  z-index: 1;
+}
+/* .hero img {
+  grid-column: 0 / span 18;
+  grid-row: 0 / span 18;
+} */
+.nav-bar {
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  color: white;
+  margin: auto;
+  font-family: archivo, arial, helvetica;
+  font-size: 18px;
+  z-index: 3;
+}
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  align-items: center;
+  margin: 0 auto;
+  list-style: none;
+  z-index: 3;
+}
+.hero a {
+  color: black;
+  text-decoration: none;
+  background: #9dff50;
+  /* width: 156px;
+  height: 80px;
+  text-align: center; */
+  padding: 12px 30px;
+  border-radius: 32px;
+  font-weight: 800;
+  font-family: archivo, arial;
+  font-size: 18px;
+  z-index: 3;
+}
+.container {
+  grid-column: span 18;
+}
+.container .grid-img {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: normal;
+  font-family: monument extended, serif;
+  color: white;
+  grid-row: 3 / span 8;
+  grid-column: 8 / span 18;
+  z-index: 3;
+}
+h1 span {
+  background: #9dff50;
+  padding: 0 8px;
+  color: #222222;
+  z-index: 3;
+}
+
+h3 {
+  font-size: 48px;
+  font-family: archivo, arial, helvetica;
+  color: white;
+  grid-row: 4 / span 10;
+  grid-column: 7 / span 18;
+  z-index: 3;
+}
+p {
+  font-size: 24px;
+  color: white;
+  grid-row: 5 / span 8;
+  grid-column: 5 / span 10;
+  text-align: center;
+  z-index: 3;
+}
+.square {
+  height: 298px;
+  width: 298px;
+  background: #e5e7ec;
+  border: 5px solid #ffffff;
+  border-radius: 32px;
+}
+.box-1 {
+  rotate: 10deg;
+  background-color: #8cf452;
+}
+.box-2 {
+  rotate: 355deg;
+  background-color: #51554e;
+}
+.box-3 {
+  rotate: 10deg;
+  background-color: #e55158;
+}
+.box-4 {
+  background-color: #eada7e;
+  rotate: 350deg;
+}
+.squares-container {
+  display: flex;
+  grid-row: 7 / span 18;
+  grid-column: 5 / span 12;
+  overflow-y: visible;
+  z-index: 3;
+}

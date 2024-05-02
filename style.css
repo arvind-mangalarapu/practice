@@ -6,14 +6,14 @@
   padding: 0;
 }
 .hero {
-  display: grid;
-  grid-template-columns: repeat(18, 0.5fr);
-  grid-template-rows: repeat(7, 0.5fr);
-  gap: 1px;
-  width: 100%;
-  height: 60%;
-  background: url("images/Rectangle\ 5.png") center/cover no-repeat;
-  z-index: 1;
+  display: flex;
+  /* grid-template-columns: repeat(18, 0.5fr);
+  grid-template-rows: repeat(7, 0.5fr); */
+  /* gap: 1px; */
+  flex-direction: column;
+  justify-content: space-between;
+  height: 60vw;
+  background: url("images/image.png") center/cover no-repeat;
 }
 /* .hero img {
   grid-column: 0 / span 18;
@@ -28,7 +28,6 @@
   margin: auto;
   font-family: archivo, arial, helvetica;
   font-size: 18px;
-  z-index: 3;
 }
 ul {
   display: flex;
@@ -37,7 +36,6 @@ ul {
   align-items: center;
   margin: 0 auto;
   list-style: none;
-  z-index: 3;
 }
 .hero a {
   color: black;
@@ -51,49 +49,61 @@ ul {
   font-weight: 800;
   font-family: archivo, arial;
   font-size: 18px;
-  z-index: 3;
 }
 .container {
   grid-column: span 18;
 }
-.container .grid-img {
-  width: 100%;
-  height: 60%;
-  position: absolute;
-  z-index: 2;
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
 }
 
-h1 {
-  font-size: 80px;
-  font-weight: normal;
-  font-family: monument extended, serif;
-  color: white;
-  grid-row: 3 / span 8;
-  grid-column: 8 / span 18;
-  z-index: 3;
-}
-h1 span {
-  background: #9dff50;
-  padding: 0 8px;
-  color: #222222;
-  z-index: 3;
+.heading-container {
+  .heading1 {
+    font-size: 80px;
+    font-weight: normal;
+    font-family: monument extended, serif;
+    color: white;
+    display: inline-block;
+  }
+  .katalyst span {
+    display: block;
+    transform: skew(13deg);
+  }
+  .katalyst {
+    display: inline-block;
+    border-radius: 13px;
+    color: #222222;
+    padding: 5px 10px;
+    background: #8cf452;
+    transform: skew(-13deg);
+  }
 }
 
 h3 {
   font-size: 48px;
   font-family: archivo, arial, helvetica;
   color: white;
-  grid-row: 4 / span 10;
-  grid-column: 7 / span 18;
-  z-index: 3;
+  /* grid-row: 4 / span 10;
+  grid-column: 7 / span 18; */
 }
 p {
   font-size: 24px;
   color: white;
-  grid-row: 5 / span 8;
-  grid-column: 5 / span 10;
+  max-width: 65%;
+  /* grid-row: 5 / span 8;
+  grid-column: 5 / span 10; */
   text-align: center;
-  z-index: 3;
+}
+.squares-container {
+  margin-bottom: -100px;
+  display: flex;
+  overflow-y: visible;
+  align-items: center;
+  justify-content: center;
 }
 .square {
   height: 298px;
@@ -117,11 +127,4 @@ p {
 .box-4 {
   background-color: #eada7e;
   rotate: 350deg;
-}
-.squares-container {
-  display: flex;
-  grid-row: 7 / span 18;
-  grid-column: 5 / span 12;
-  overflow-y: visible;
-  z-index: 3;
 }

@@ -4,7 +4,24 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
+
+@font-face {
+  font-family: "monument extended";
+  src: url("/fonts/MonumentExtended-Regular.otf") format("opentype"),
+    url("fonts/MonumentExtended-Ultrabold.otf") format("truetype");
+}
+@font-face {
+  font-family: "archivo";
+  src: url("fonts/Archivo-VariableFont_wdth\,wght.ttf") format("truetype");
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .hero {
   display: flex;
   /* grid-template-columns: repeat(18, 0.5fr);
@@ -220,7 +237,7 @@ h3 {
   grid-column: 8 / span 4;
   grid-row: 2 / span 3;
   font-size: 20px;
-  font-family: Monument extended, serif;
+  font-family: monument extended, serif;
   font-weight: normal;
   margin-left: -60px;
   margin-top: 20px;
@@ -351,4 +368,170 @@ li:hover {
   p {
     font-size: 28px;
   }
+}
+/* design-process */
+
+.design-process {
+  background: url(images/Group\ 42.png) center/cover no-repeat;
+  height: 1700px;
+  padding-top: 200px;
+  .design-process-head {
+    text-align: center;
+  }
+  p {
+    color: white;
+    text-align: center;
+  }
+  p span {
+    color: #222222;
+  }
+}
+.design-process-para {
+  font-size: 20px;
+  max-width: 50%;
+  margin: 0 auto;
+}
+.design-process-box {
+  height: 300px;
+  width: 500px;
+  border-radius: 32px;
+  background-color: #e5e7ec;
+}
+.design-process-box-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  padding: 32px;
+  border-radius: 32px;
+  margin: 0 auto;
+  gap: 30px;
+  place-items: center;
+
+  max-width: 90%;
+  .main-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-evenly;
+    width: 600px;
+    height: 620px;
+    padding: 42px;
+    background-color: #2a2a2a;
+    border-radius: 32px;
+  }
+  .main-box p {
+    color: #666666;
+    text-align: left;
+    font-size: 32px;
+    font-family: monument extended, monospace;
+  }
+  h4 {
+    color: white;
+    font-size: 24px;
+    font-family: monument extended, serif;
+  }
+  p:nth-last-child(1) {
+    color: white;
+    font-size: 18px;
+    font-family: archivo, arial, helvet;
+  }
+  .design-process-box {
+    align-self: center;
+  }
+}
+
+/* best work */
+
+.best-work-container {
+  display: flex;
+  max-width: 90%;
+  margin: 100px auto;
+  justify-content: space-between;
+  align-items: flex-end;
+  .best-work-head {
+    font-size: 40px;
+    font-weight: normal;
+    font-family: monument extended, serif;
+    color: #222222;
+    display: inline-block;
+  }
+  .best-work span {
+    display: block;
+    transform: skew(13deg);
+  }
+  .best-work {
+    display: inline-block;
+    border-radius: 13px;
+    color: #222222;
+    padding: 5px 10px;
+    background: #8cf452;
+    transform: skew(-13deg);
+  }
+}
+.see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 57px;
+  width: 166px;
+  border: 0.5px solid black;
+  border-radius: 32px;
+  a {
+    text-decoration: none;
+    color: #222222;
+  }
+}
+.best-work-scroll {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  justify-content: space-evenly;
+}
+.best-work-container {
+  display: flex;
+  overflow-x: scroll;
+
+  .best-work-box {
+    height: 465px;
+    min-width: 630px;
+    margin: 5px;
+    border: 3px solid white;
+    background-color: #e5e7ec;
+    border-radius: 32px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.best-work-footer {
+  max-width: 830px;
+  margin: 0 auto;
+}
+.best-work-ul {
+  display: flex;
+  li {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    color: #888888;
+    font-size: 18px;
+    font-family: archivo, serif;
+    border-radius: 32px;
+  }
+}
+.best-work-footer-flex {
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  p {
+    font-size: 40px;
+    font-family: monument extended, serf;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+.best-work-para {
+  font-size: 18px;
+  font-family: archivo, arial;
+  text-align: center;
 }

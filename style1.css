@@ -39,15 +39,15 @@
 
 .header-container {
   background: url("/images/header-background.png") center/cover no-repeat;
-  height: 45vh;
+  height: 90vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   @media (max-width: 1025px) {
-    height: 45vh;
+    height: 65vh;
   }
   @media (max-width: 768px) {
-    height: 40vh;
+    height: 70vh;
   }
 
   .nav-bar {

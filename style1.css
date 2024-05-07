@@ -144,6 +144,7 @@
     white-space: nowrap;
     color: white;
     justify-items: center;
+    line-height: 80px;
     text-align: center;
     margin: 35px 0 20px -40px;
     display: inline;
@@ -194,6 +195,7 @@
     background-color: var(--card-light-bg);
     width: 100%;
     padding-bottom: 100%;
+    transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
   }
   .box-1 {
     rotate: 10deg;
@@ -201,13 +203,16 @@
     grid-column: 1 / span 1;
     background: url(images/tablet-with-smartphone-devices-tech-generative-ai.jpg)
       center/cover no-repeat;
+    filter: grayscale(100%);
     @media (max-width: 768px) {
       border-radius: 20px;
       grid-row: 1 / span 1;
       grid-column: 5 / span 1;
       rotate: 0deg;
+
       &:hover {
         grid-column: span 2;
+        filter: grayscale(0%);
       }
     }
   }
@@ -217,13 +222,16 @@
     grid-column: 2 / span 1;
     background: url(images/person-working-futuristic-office.jpg) center/cover
       no-repeat;
+    filter: grayscale(100%);
     @media (max-width: 768px) {
       border-radius: 20px;
       grid-row: 1 / span 1;
       grid-column: 6 / span 1;
       rotate: 0deg;
+
       &:hover {
         grid-column: span 2;
+        filter: grayscale(0);
       }
     }
   }
@@ -233,6 +241,7 @@
     grid-column: 3 / span 1;
     background: url(images/view-futuristic-mystical-other-worldly-sky.jpg)
       center/cover no-repeat;
+    filter: grayscale(100%);
     @media (max-width: 768px) {
       border-radius: 20px;
       grid-row: 1 span 1;
@@ -240,6 +249,7 @@
       rotate: 0deg;
       &:hover {
         grid-column: span 2;
+        filter: grayscale(0%);
       }
     }
   }
@@ -249,6 +259,7 @@
     grid-column: 4 / span 1;
     background: url(images/workplace-with-computer-lamp-cup-coffee-dark-room.jpg)
       center/cover no-repeat;
+    filter: grayscale(100%);
     @media (max-width: 768px) {
       border-radius: 20px;
       grid-row: 1 / span 1;
@@ -256,7 +267,40 @@
       rotate: 0deg;
       &:hover {
         grid-column: span 2;
+        filter: grayscale(0%);
       }
     }
+  }
+}
+input {
+  display: none;
+}
+.icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  .card > .row {
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    flex-wrap: nowrap;
+    height: 100%;
+    align-content: flex-end;
+  }
+  .card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+  }
+
+  input:checked {
+    width: 300px;
   }
 }

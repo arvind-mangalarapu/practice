@@ -208,9 +208,11 @@
     rotate: 10deg;
     grid-row: 1 / span 1;
     grid-column: 1 / span 1;
-    background: url(images/tablet-with-smartphone-devices-tech-generative-ai.jpg)
-      center/cover no-repeat;
+    background: url(images/bulb.png) center/cover no-repeat;
     filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+    }
     @media (max-width: 768px) {
       border-radius: 20px;
       grid-row: 1 / span 1;
@@ -227,9 +229,11 @@
     rotate: 355deg;
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
-    background: url(images/person-working-futuristic-office.jpg) center/cover
-      no-repeat;
+    background: url(images/cup.png) center/cover no-repeat;
     filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+    }
     @media (max-width: 768px) {
       border-radius: 20px;
       grid-row: 1 / span 1;
@@ -246,9 +250,11 @@
     rotate: 10deg;
     grid-row: 1 / span 1;
     grid-column: 3 / span 1;
-    background: url(images/view-futuristic-mystical-other-worldly-sky.jpg)
-      center/cover no-repeat;
+    background: url(images/bowl.png) center/cover no-repeat;
     filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+    }
     @media (max-width: 768px) {
       border-radius: 20px;
       grid-row: 1 span 1;
@@ -264,9 +270,12 @@
     rotate: 350deg;
     grid-row: 1 / span 1;
     grid-column: 4 / span 1;
-    background: url(images/workplace-with-computer-lamp-cup-coffee-dark-room.jpg)
-      center/cover no-repeat;
+    background: url(images/vapours.png) center/cover no-repeat;
+
     filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+    }
     @media (max-width: 768px) {
       border-radius: 20px;
       grid-row: 1 / span 1;
@@ -327,7 +336,11 @@ input {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(15, 1fr);
   gap: 25px;
+  @media (max-width: 1024px) {
+    grid-template-rows: repeat(8, 1fr);
+  }
   @media (max-width: 768px) {
+    grid-template-rows: repeat(15, 1fr);
   }
   .digital-thinkers-para1 {
     grid-column: 1 / span 6;
@@ -354,10 +367,15 @@ input {
   .digital-thinkers-imgbox {
     grid-column: 1 / span 7;
     grid-row: 5 / span 9;
-    background: url(images/wire.png) center/cover no-repeat;
+    background: url(images/feather.png) center/cover no-repeat;
     border: 3px solid white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: var(--font-32);
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+    }
+
     img {
       margin: -30px;
     }
@@ -376,7 +394,12 @@ input {
     border-radius: var(--font-32);
     border: 3px solid white;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    background: url(images/light.png) center/cover no-repeat;
+    background: url(images/featherbgnone.png) center/cover no-repeat;
+
+    filter: grayscale(100%);
+    &:hover {
+      filter: grayscale(0%);
+    }
     @media (max-width: 1024px) {
       grid-column: 8 / span 7;
       grid-row: 3 / span 6;
@@ -391,6 +414,86 @@ input {
       grid-column: 1 / span 12;
       grid-row: 10 / span 6;
       margin-top: 40px;
+    }
+  }
+}
+
+/* our services */
+.our-services-container {
+  margin-top: 100px;
+  .side-head {
+    transform: translateX(-40%) translateY(95px) rotate(270deg);
+    padding: 11px 30px;
+    max-width: fit-content;
+    background: var(--primary-color);
+    float: left;
+  }
+  .our-services-body {
+    max-width: 90%;
+    margin: 0 auto;
+    .heading-container {
+      display: flex;
+      align-items: center;
+      justify-self: flex-start;
+      width: 100%;
+      margin: 0 auto;
+      .heading1 {
+        font-size: 40px;
+        font-weight: normal;
+        font-family: monument extended, serif;
+        color: var(--card-dark-bg);
+        display: inline-block;
+      }
+      .service {
+        display: inline-block;
+        border-radius: 13px;
+        color: var(--card-dark-bg);
+        padding: 5px 10px;
+        background: var(--primary-color);
+        transform: skew(-13deg);
+      }
+      .service span {
+        display: block;
+        transform: skew(13deg);
+      }
+    }
+    .our-services-paragraph {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      ul {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+        li {
+          display: flex;
+          border: 0.5px solid gray;
+          width: 450px;
+          height: 95px;
+          border-radius: 120px;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 40px;
+          font-size: var(--font-24);
+          font-family: archivo, Arial, Helvetica, sans-serif;
+          font-weight: 300;
+
+          &:hover {
+            background: #000;
+            color: white;
+            .number {
+              color: var(--primary-color);
+            }
+          }
+
+          span {
+            font-size: var(--font-24);
+            font-weight: 900;
+            font-family: monument extended, "Helvetica Neue";
+          }
+        }
+      }
     }
   }
 }

@@ -38,7 +38,8 @@
 }
 
 .header-container {
-  background: url("/images/header-background.png") center/cover no-repeat;
+  background: url(https://res.cloudinary.com/dcacjkyyk/image/upload/v1715155923/header-background_hzqzhf.png)
+    center/cover no-repeat;
   height: 90vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -500,6 +501,7 @@ input {
     }
   }
 }
+
 .our-services-grid {
   display: grid;
   grid-template-columns: repeat(2, 0.5fr);
@@ -552,4 +554,15 @@ input {
 .our-head-flex {
   display: flex;
   justify-content: space-evenly;
+}
+
+/* design process */
+
+.gray-bg {
+  transform: translateX(-40%) translateY(95px) rotate(270deg);
+  padding: 11px 30px;
+  max-width: fit-content;
+  background: var(--card-middark-bg);
+  float: left;
+  color: white;
 }
